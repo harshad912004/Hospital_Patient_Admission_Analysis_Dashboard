@@ -1,43 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hospital Patient Admission Analysis Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f5f5f5;
+      background-color: #f4f7fa;
       color: #333;
+      line-height: 1.6;
+      padding: 30px;
     }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
     h1 {
-      color: #007acc;
+      color: #2E3B4E;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
-    a {
-      color: #0066cc;
+
+    h2 {
+      color: #444;
+      font-size: 22px;
+      margin-top: 30px;
     }
-    .preview {
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2E3B4E;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
       margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #1e2a38;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .kpi {
+      background-color: #f0f4f7;
+      padding: 10px 20px;
+      border-left: 5px solid #2E3B4E;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+
+    .slide img {
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid #333;
+    }
+
+    #backToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 99;
+        border: none;
+        background-color: white;
+        color: white;
+        cursor: pointer;
+        padding: 12px 16px;
+        font-size: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #backToTopBtn:hover {
+        background-color: #1e2a38;
+    }
+
+    @media screen and (max-width: 768px) {
+        .slide img {
+            height: auto;
+            width: 100%;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 10px 16px;
+        }
     }
   </style>
 </head>
 <body>
-  <h1>🏥 Hospital Patient Admission Analysis Dashboard</h1>
-  <p>This Excel-based dashboard provides insightful visual analytics on patient demographics, types of hospital admissions, treatment outcomes, 
-    and key healthcare metrics like heart failure and chest infections. Ideal for clinical analysis and data storytelling in the healthcare domain.</p>
-  
-  <ul>
-    <li><a href="Hospital Admission Analysis Dataset.csv" download>📥 Download Dashboard (.csv)</a></li>
-  </ul>
-  
-  <div class="preview">
-    <h3>🔍 Dashboard Preview</h3>
-    <img src="HAAD_Dashboard.png" alt="Hospital Admission Dashboard Screenshot" width="900">
+  <div class="container">
+    <h1>Hospital Patient Admission Analysis Dashboard</h1>
+    <p><strong>Project Type:</strong> Excel Dashboard <strong>|</strong> Healthcare Analytics <strong>|</strong> Patient Metrics</p>
+
+    <h2>🔍 Project Summary</h2>
+    <p>This Excel-based dashboard offers a comprehensive analysis of hospital patient admissions across departments.
+      It visualizes demographics, admission types, outcomes, and health indicators like heart failure and chest infection trends.
+      This dashboard is ideal for data storytelling in clinical and hospital administration contexts.
+    </p>
+
+    <h2>📂 Download Project File</h2>
+    <a href="Hospital Admission Analysis Dataset.csv" class="btn" download>📊 Download Dataset (.csv)</a>
+
+    <h2>📸 Dashboard Preview</h2>
+    <div class="slide"><img src="HAAD_Dashboard.png" alt="Hospital Admission Dashboard"></div>
+
+    <h2>📈 Key Insights</h2>
+    <ul>
+      <li>High admission rates for older patients (age 60+), especially in cardiology and pulmonology.</li>
+      <li>Emergency admissions dominate in heart failure and chest infection cases.</li>
+      <li>Male patients have slightly higher readmission rates across departments.</li>
+      <li>Discharge success rate highest among patients with shorter admission periods.</li>
+      <li>Seasonal peaks observed in respiratory cases during winter months.</li>
+    </ul>
+
+    <h2>✅ Suggested Use Cases</h2>
+    <div class="kpi">Hospital management can track admission spikes by season and department.</div>
+    <div class="kpi">Use as a teaching tool for students learning healthcare analytics.</div>
+    <div class="kpi">Apply filters to analyze readmission trends and prevent avoidable cases.</div>
+    <div class="kpi">Drive improvements in discharge protocols and emergency preparedness.</div>
+
+    <h2>🧠 Skills Demonstrated</h2>
+    <ul>
+      <li>Excel Dashboard Design (Pivot Tables, Charts)</li>
+      <li>Data Cleaning & Preprocessing in Excel</li>
+      <li>Healthcare KPIs and Metric Design</li>
+      <li>Storytelling through Data Visualization</li>
+    </ul>
+
+    <h2>🚀 Future Enhancements</h2>
+    <ul>
+      <li>Add slicers for department-wise deep-dive</li>
+      <li>Include patient satisfaction data (if available)</li>
+      <li>Turn dashboard into an interactive web-based report</li>
+    </ul>
+
+    <h2>📁 Source Code</h2>
+    <a href="https://github.com/harshad912004/Hospital_Patient_Admission_Analysis_Dashboard" class="btn" target="_blank">View GitHub Repository</a>
+
+    <h2>📞 Let's Connect</h2>
+    <p>For internships, collaborations, or feedback — reach out!</p>
+    <a href="https://www.linkedin.com/in/harshad-dhongade" class="btn" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="height: 18px; vertical-align: middle; margin-right: 8px;">
+      Connect on LinkedIn
+    </a>
+    <a href="https://github.com/harshad912004" class="btn" target="_blank">Connect on GitHub Profile</a>
   </div>
 
-  <footer>
-    <p style="margin-top: 40px;">Created by <strong>Harshad</strong> | MCA Student | Data Analytics Enthusiast</p>
-    <p><a href="https://www.linkedin.com/in/harshad-dhongade" target="_blank">Connect on LinkedIn</a></p>
-  </footer>
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">🔝</button>
+
+  <script>
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
